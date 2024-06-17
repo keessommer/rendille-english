@@ -43,7 +43,14 @@ const dictionary = {
         {EN:'God rest you (plural) well.', RE:'Waákh atin bariisti.'},
         {EN:'May God bear you up (safe journey).', RE:`Waákh seréy kaási'do.`},
         {EN:'Our God.', RE:`Waákheenna`},
-    ]
+    ],
+    'Yeedád hawwées - Conversation words': [
+        {EN: 'Yes.', RE: `Aa / Aa'héey.`},
+        {EN: 'No.', RE: 'Méle.'},
+    ],
+    // 'Yeedád reém - Nominal grammar': [
+    //     {EN: 'The boy.', RE: 'Ínam.'},
+    // ],
 }
 
 const dictKeys = Object.keys(dictionary)
