@@ -48,7 +48,7 @@ const dictionary = {
         {EN: 'Yes.', RE: `Aa / Aa'héey.`},
         {EN: 'No.', RE: 'Méle.'},
     ],
-    'Camel terms  - Yeedád gáal': [
+    'Yeedád gáal - Camel terms': [
         {EN: 'camel', RE: `gáal`},
         {EN: 'castrated male camel', RE: 'foólas'},
         {EN: 'castrated male camels', RE: 'foolasó'},
