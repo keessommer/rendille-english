@@ -96,6 +96,18 @@ const dictionary = {
         {EN: 'fresh untreated camel skins', RE: 'gogág'},
         {EN: 'camel foot', RE: 'yákh'},
     ],
+
+    'Yeedád baá - Pronouns': [
+        {EN: 'I / me', RE: 'an(í)'},
+        {EN: 'you singular, long form', RE: 'at(í)'},
+        {EN: 'he', RE: 'us(ú)'},
+        {EN: 'she', RE: 'iché'},
+        {EN: 'we including you', RE: 'innó'},
+        {EN: 'we excluding you', RE: 'náh'},
+        {EN: 'you plural', RE: 'atín'},
+        {EN: 'they', RE: 'ichó'},
+    ],
+
     // 'Yeedád reém - Nominal grammar': [
     //     {EN: 'The boy.', RE: 'Ínam.'},
     // ],
