@@ -99,7 +99,7 @@ const dictionary = {
 
     'Yeedád baá - Pronouns': [
         {EN: 'I / me', RE: 'an(í)'},
-        {EN: 'you singular, long form', RE: 'at(í)'},
+        {EN: 'you singular', RE: 'at(í)'},
         {EN: 'he', RE: 'us(ú)'},
         {EN: 'she', RE: 'iché'},
         {EN: 'we including you', RE: 'innó'},
@@ -151,7 +151,6 @@ const dictKeys = Object.keys(dictionary)
 //helper functions
 const randomDictEntry = (cat = false) => {
     if (cat && cat != 'false'){
-        console.log(cat);
         return dictionary[cat][Math.floor(
             Math.random() * dictionary[cat].length)];
     }
@@ -193,12 +192,19 @@ function newPrompt(lan, cat = false){
     exerciseContainer.innerHTML = 
     `<p>${dictEntry[lan]}</p>`;
     answers.forEach(a => {exerciseContainer.innerHTML += 
-        `<button onClick="showCorrect(${a.correct ? true : false}, ${lan}, '${cat}')">${a[oppositeLan]}</button>`});
+        `<button onClick="showCorrect(${a.correct ? true : false}, 
+            ${lan}, '${cat}', '${dictEntry[lan]}', 
+            '${dictEntry[oppositeLan]}')">${a[oppositeLan]}</button>`});
 }
 
-function showCorrect(correct, lan, cat){
-    exerciseContainer.innerHTML = `<p>${correct ? 'Haaggán!' : 'Baábul.'}</p> <p>${correct ? 'Correct!' : 'Incorrect.'}</p>
+function showCorrect(correct, lan, cat, dictEntryOrigin, dictEntryGoal){
+    exerciseContainer.innerHTML = `<p>${correct ? 'Haaggán! Correct!' : 'Baábul. Incorrect.'}</p>
+    ${correct ? '' : `${dictEntryOrigin}: ${dictEntryGoal}</p>`}
     <button onClick="newPrompt(${lan}, '${cat}')">Worsí husúb - Next question</button>`;
+    console.log(lan);
+    console.log(cat);
+    console.log(dictEntry);
+
 }
 
 function returnHome(){
@@ -211,7 +217,6 @@ function returnHome(){
 function showCategories(lan){
     exerciseContainer.innerHTML = `<button onClick="newPrompt(${lan})">
         Yeedád tuummán - All words</button><hr>`;
-    console.log(dictKeys)
     dictKeys.forEach(k => exerciseContainer.innerHTML += 
         `<button onClick="newPrompt(${lan}, '${k}')">${k}</button>`);
 }

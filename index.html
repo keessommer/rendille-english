@@ -4,16 +4,20 @@
     <meta charset="UTF-8" />
     <title>Ren'dille English</title>
     <style>
+        :root{
+            --font-size-var: calc(max(4vh, 20pt));
+        }
+        
         html{
             background-color: black;
             color: white;
             font-family: Verdana, Arial, Helvetica, sans-serif;
-            font-size: 64px;
+            font-size: var(--font-size-var);
         }
         button{
             display: block;
-            margin: 20px;
-            font-size: 64px;
+            margin: 10pt;
+            font-size: var(--font-size-var);
         }
         #exerciseContainer{
             display: flex;
